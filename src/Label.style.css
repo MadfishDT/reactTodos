@@ -1,0 +1,32 @@
+.label-container {
+    width: 400px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label-header {
+    width: 100%;
+    display: block;
+}
+
+.label-add-color-panel {
+    width: 100%;
+    display: block;
+}
+
+.lable-contents-card {
+    height: 70px;
+}
+
+.lable-contents-card-footer {
+    height: 20px;
+    padding-top: 1px !important;
+}
+
+.lable-contents-card-body {
+    min-height: 60px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
