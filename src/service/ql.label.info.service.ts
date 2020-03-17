@@ -15,14 +15,17 @@ export class QLLabelInfoService extends GQLService {
         }
         return QLLabelInfoService.default;
     }
+
+    
     public addLable(title: string, color: string, desc?: string) {
         const mutateQL = gql`
             mutation AddLabel($qtitle: String, $qcolor: String, $qdesc: String){
                 createLabel(title: $qtitle,
                             color: $qcolor,
                             desc: $qdesc) 
-            }`
-        return this.aplClient.clinet.mutate({
+            }`;
+
+        return this.aplClient.mutate({
             mutation: mutateQL,
             variables: {
                 qtitle: title,
@@ -42,7 +45,7 @@ export class QLLabelInfoService extends GQLService {
             }
         }`;
 
-        return this.aplClient.clinet.query({
+        return this.aplClient.query({
             query: query,
             variables: {
                 user: quser

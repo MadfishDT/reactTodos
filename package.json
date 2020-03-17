@@ -1,51 +1,54 @@
 {
-  "name": "todoql",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@fortawesome/react-fontawesome": "^0.1.8",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.0",
-    "@types/node": "^12.12.25",
-    "@types/react": "^16.9.18",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-redux": "^7.1.6",
-    "@types/reactstrap": "^8.4.1",
-    "apollo-boost": "^0.4.7",
-    "bootstrap": "^4.4.1",
-    "graphql": "^14.5.8",
-    "react": "^16.12.0",
-    "react-apollo": "^3.1.3",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.1.3",
-    "react-scripts": "3.3.0",
-    "reactstrap": "^8.4.0",
-    "redux-thunk": "^2.3.0",
-    "typescript": "^3.7.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "todoql",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.26",
+        "@fortawesome/free-solid-svg-icons": "^5.12.0",
+        "@fortawesome/react-fontawesome": "^0.1.8",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.4.0",
+        "@testing-library/user-event": "^7.2.1",
+        "@types/jest": "^24.9.0",
+        "@types/node": "^12.12.25",
+        "@types/react": "^16.9.18",
+        "@types/react-dom": "^16.9.5",
+        "@types/react-redux": "^7.1.6",
+        "@types/reactstrap": "^8.4.1",
+        "apollo-boost": "^0.4.7",
+        "bootstrap": "^4.4.1",
+        "copy": "^0.3.2",
+        "graphql": "^14.5.8",
+        "react": "^16.12.0",
+        "react-apollo": "^3.1.3",
+        "react-dom": "^16.12.0",
+        "react-redux": "^7.1.3",
+        "react-scripts": "3.3.0",
+        "reactstrap": "^8.4.0",
+        "redux-thunk": "^2.3.0",
+        "typescript": "^3.7.5"
+    },
+    "scripts": {
+
+        "start:dev": ".\\node_modules\\.bin\\copy .\\environments\\env.dev.ts .\\src\\environments\\config.ts & react-scripts start --env=stage",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
