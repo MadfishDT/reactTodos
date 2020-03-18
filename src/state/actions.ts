@@ -1,10 +1,16 @@
-import { QLLabelInfoService } from '../service/ql.label.info.service';
+import { QLLabelInfoService, GQLService } from '../service/service';
 import { LabelInfos, LabelInfo, ACTION_LABEL, LABELACTIONSTATE} from './types';
 import { Dispatch } from 'redux';
 
 export interface LabelActionType {
     type: ACTION_LABEL,
     data: LabelInfos
+}
+
+export const requestConnectionInit = () => {
+    return async (dispatch: Dispatch<any>) => {
+        
+    }
 }
 
 export const requestAddLabel = (label: LabelInfo) => {
@@ -14,7 +20,7 @@ export const requestAddLabel = (label: LabelInfo) => {
             return {type: ACTION_LABEL.CHANGESTATELABEL, data: {state: LABELACTIONSTATE.START}};
         });
         const result = await qlLabel.addLable(label.title, label.color, label.desc);
-        if(result.data.createLabel) {
+        if(result && result.data.createLabel) {
             dispatch(acAddLabel(label));
             dispatch(requestLabels("AAA"));
         } else {
@@ -35,7 +41,7 @@ export const requestLabels = (user: string) => {
         });
 
         const result = await qlLabel.getLabels(user);
-        if(result.data.labels) {
+        if(result && result.data.labels) {
             dispatch(acGetLabel(result.data.labels as LabelInfo[]));
         }
 

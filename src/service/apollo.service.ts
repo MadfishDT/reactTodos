@@ -10,9 +10,10 @@ export class ApolloQLService {
     private static default: ApolloQLService;
     constructor() {
       this.aplClient = null;
+      console.log('constructor apollo');
     }
 
-    public async initialized() {
+    public async initialize() {
         return (await this.reset());
     }
 

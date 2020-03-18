@@ -1,0 +1,1 @@
+export const GQL_HOST_ADDRESS = 'localhost:3001'

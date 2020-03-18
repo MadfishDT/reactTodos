@@ -1,0 +1,1 @@
+export const ERROR = 'localhost:3001'
